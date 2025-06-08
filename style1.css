@@ -1,196 +1,118 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global */
 body {
-  font-family: 'Rubik', sans-serif;
-}
-
-/* Login Page */
-.login-body {
-  background: linear-gradient(135deg, #7ed6df, #e0eafc);
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #9be7ff, #f3e5f5);
+  color: #333;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.login-card {
+.container {
   background: white;
   padding: 40px;
   border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 400px;
 }
 
-.login-card h1 {
-  font-size: 36px;
-  color: #273c75;
+h1 {
+  font-size: 32px;
+  color: #4a148c;
+  margin-bottom: 15px;
 }
 
 .tagline {
-  color: #00a8ff;
-  margin: 10px 0;
-  font-weight: 600;
-}
-
-.desc {
-  font-size: 15px;
-  margin-bottom: 30px;
-}
-
-form input {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border: 2px solid #00a8ff;
-  font-size: 15px;
-}
-
-form button {
-  padding: 12px;
-  width: 100%;
-  background: #00a8ff;
-  border: none;
-  border-radius: 30px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-form button:hover {
-  background: #0984e3;
-}
-
-.footer-text {
-  margin-top: 20px;
-  font-size: 13px;
   color: #555;
-}
-
-/* Dashboard Page */
-.dashboard-body {
-  background: linear-gradient(to right, #e0f7fa, #ffffff);
-  min-height: 100vh;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.dashboard h1 {
-  font-size: 36px;
-  color: #2d3436;
-}
-
-.dashboard-tagline {
-  font-size: 18px;
   margin-bottom: 30px;
-  color: #0984e3;
+  font-size: 16px;
 }
 
-.dashboard-buttons .action-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  margin: 10px;
-  background: #00cec9;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
-.dashboard-buttons .action-btn:hover {
-  transform: translateY(-4px);
-  background: #00b894;
-}
-
-.feature-list {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+.form-box {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 }
 
-.feature-item {
-  background: #dff9fb;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 14px;
-}
-
-/* Add Page */
-.add-body {
-  background: linear-gradient(to right, #c8d6e5, #ffffff);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.add-card {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-}
-
-.add-card h2 {
-  margin-bottom: 20px;
-  color: #222f3e;
-}
-
-#habitForm input {
-  width: 100%;
+input[type="text"],
+input[type="password"],
+input[type="date"] {
   padding: 12px;
-  margin-bottom: 10px;
+  border: 2px solid #ce93d8;
   border-radius: 10px;
-  border: 2px solid #10ac84;
-}
-
-#habitForm button {
-  width: 100%;
-  padding: 12px;
-  background: #10ac84;
-  color: white;
-  border: none;
-  border-radius: 30px;
   font-size: 16px;
+}
+
+button {
+  padding: 12px;
+  background-color: #8e24aa;
+  color: white;
   font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-#habitForm button:hover {
-  background: #079992;
+button:hover {
+  background-color: #6a1b9a;
 }
 
-.habit-list {
+.button {
+  display: inline-block;
   margin-top: 20px;
-  list-style: none;
+  background: #3949ab;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #1e3194;
+}
+
+.back {
+  background: #0097a7;
+}
+
+.back:hover {
+  background: #00796b;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+ul li {
+  background: #f1f8e9;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 5px solid #8bc34a;
   text-align: left;
 }
 
-.habit-list li {
-  background: #f1f2f6;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+.confirmation-msg {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in;
 }
 
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #0984e3;
-  text-decoration: none;
-  font-weight: 600;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
